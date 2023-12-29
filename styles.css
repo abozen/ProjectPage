@@ -1,0 +1,122 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    background-image: url('path/to/header-background.jpg'); /* Replace with header image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Main styles */
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Section styles */
+section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* Date and navigation styles */
+#dateContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#prevBtn,
+#nextBtn {
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    background-color: #45a049;
+}
+
+#dateDisplay {
+    font-size: 18px;
+}
+
+/* Match container styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.date-container,
+.match-container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Team info styles */
+.team {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.team-logo {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.team-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Match details styles */
+.match-info {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.match-details {
+    margin-bottom: 10px;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    section {
+        margin: 10px 0;
+    }
+}

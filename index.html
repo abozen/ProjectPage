@@ -1,94 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dinamik Tablo Oluştur</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin-top: 20px;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Futbol Skor Takip</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <header>
+    <h1>Futbol Skor Takip</h1>
+  </header>
 
-    <h2>Tablo Yapımı</h2>
+  <main>
+    <div class="container">
+      <div class="date-container">
+        <section>
+          <div id="dateContainer">
+            <button id="prevBtn">Geri</button>
+            <p id="dateDisplay">asd</p>
+            <button id="nextBtn">İleri</button>
+          </div>
+        </section>
+      </div>
+      <div class="match-container">
+        <section>
+          <h2>Maçlar</h2>
+          <div id="match-container">
+            <!-- Maç verileri buraya eklenecek -->
+          </div>
+        </section>
+      </div>
+    </div>
+    
 
-    <form id="tableForm">
-        <label for="rowCount">Satır Sayısı:</label>
-        <input type="number" id="rowCount" name="rowCount" required>
-        <br>
-        <br>
-        <label for="colCount">Sütun Sayısı:</label>
-        <input type="number" id="colCount" name="colCount" required>
-        <br>
-        <br>
-        <button type="button" onclick="createTable()">Tablo Oluştur</button>
-        <label for="boyut">Boyut:</label>
-        <select name="boyut" id="boyut">
-            <option value=5>5x5</option>
-            <option value=6>6x6</option>
-            <option value=7>7x7</option>
-            <option value=8>8x8</option>
-          </select>
-    </form>
 
-    <div id="tableContainer"></div>
 
-    <script>
 
-const input1 = document.getElementById("rowCount");
-const input2 = document.getElementById("colCount");
-const select = document.getElementById("boyut");
+  </main>
 
-input1.addEventListener("input", createTable);
-input2.addEventListener("input", createTable);
-select.addEventListener("change", setCounts); 
-
-function setCounts() {
-    var selectedValue = select.value;
-    input1.value = selectedValue;
-    input2.value = selectedValue;
-    createTable(); 
-}
-
-function createTable() {
-    var existingTable = document.querySelector("#tableContainer table");
-    if (existingTable) {
-        existingTable.remove();
-    }
-
-    var rowCount = parseInt(input1.value);
-    var colCount = parseInt(input2.value);
-
-    var table = document.createElement("table");
-
-    for (var i = 0; i < rowCount; i++) {
-        var row = table.insertRow();
-
-        for (var j = 0; j < colCount; j++) {
-            var cell = row.insertCell();
-            cell.innerHTML = (i + 1) + "-" + (j + 1);
-            cell.style.width = "50px";
-            cell.style.height = "50px";
-        }
-    }
-
-    document.getElementById("tableContainer").appendChild(table);
-}
-
-    </script>
-
+  <script src="script.js"></script>
 </body>
+
 </html>
