@@ -7,22 +7,20 @@
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f5f5f5;
     color: #333;
 }
 
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: #2c3e50;
     color: #fff;
     padding: 20px;
     text-align: center;
-    background-image: url('path/to/header-background.jpg'); /* Replace with header image */
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(to right, #2980b9, #2c3e50); /* Gradient background */
 }
 
 /* Main styles */
@@ -30,6 +28,18 @@ main {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    animation: fadeIn 0.6s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Section styles */
@@ -46,26 +56,30 @@ section {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
+    animation: slideInBottom 0.5s ease-in-out; /* Slide-in animation */
 }
 
 #prevBtn,
 #nextBtn {
-    padding: 8px 16px;
+    padding: 10px 20px;
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #3498db;
     border: none;
     border-radius: 4px;
     color: #fff;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
 #prevBtn:hover,
 #nextBtn:hover {
-    background-color: #45a049;
+    background-color: #2980b9;
 }
 
 #dateDisplay {
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
 }
 
 /* Match container styles */
@@ -73,6 +87,7 @@ section {
     display: flex;
     flex-direction: column;
     width: 100%;
+    animation: fadeIn 0.6s ease-in-out; /* Fade-in animation */
 }
 
 .date-container,
@@ -83,13 +98,17 @@ section {
 
 /* Team info styles */
 .team {
-    display: inline-block;
-    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    animation: slideInBottom 0.5s ease-in-out; /* Slide-in animation */
 }
 
 .team-logo {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -99,14 +118,18 @@ section {
 
 /* Match details styles */
 .match-info {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
     margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideInBottom 0.5s ease-in-out; /* Slide-in animation */
 }
 
-.match-details {
-    margin-bottom: 10px;
+.match-details p {
+    margin-bottom: 6px;
+    color: #555;
 }
 
 /* Media query for responsiveness */

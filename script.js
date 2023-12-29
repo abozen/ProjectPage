@@ -36,7 +36,6 @@ function displayMatchInfo(match) {
 
     const matchDetails = `
     <div class="match-details">
-      <p><strong>Date:</strong> ${new Date(match.fixture.date).toLocaleDateString()}</p>
       <p><strong>Venue:</strong> ${match.fixture.venue.name}, ${match.fixture.venue.city}</p>
       <p><strong>Referee:</strong> ${match.fixture.referee}</p>
     </div>
@@ -44,12 +43,12 @@ function displayMatchInfo(match) {
       <div class="team">
         <img src="${match.teams.home.logo}" alt="${match.teams.home.name} Logo" class="team-logo">
         <p><strong>${match.teams.home.name}</strong></p>
-        <p>Goals: ${match.goals.home}</p>
+        <p> : ${match.goals.home}</p>
       </div>
       <div class="team">
         <img src="${match.teams.away.logo}" alt="${match.teams.away.name} Logo" class="team-logo">
         <p><strong>${match.teams.away.name}</strong></p>
-        <p>Goals: ${match.goals.away}</p>
+        <p> : ${match.goals.away}</p>
       </div>
     </div>
   `;
