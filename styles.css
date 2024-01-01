@@ -127,3 +127,87 @@ section {
         margin: 10px 0;
     }
 }
+.show-matches-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.show-matches-btn:hover {
+    background-color: #2980b9;
+}
+.league-select {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.league-select label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.league-select select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.league-select select:hover {
+    border-color: #2980b9;
+}
+
+.league-select select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+
+.no-matches-message {
+    display: none;
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(to right, #fd746c, #ff9068);
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.team p:nth-child(3) {
+    color: #17001d; /* Vurgulu renk */
+    font-weight: bold; /* Kalın font */
+    margin-left: 10px; /* Sol kenarda boşluk */
+    padding: 8px; /* İçeride boşluk */
+    border-radius: 5px; /* Yumuşak köşeler */
+    background-color: #f8eae3; /* Arka plan rengi */
+    display: inline-block; /* Satır içi öğe */
+}
+
+
+
+
+

@@ -13,7 +13,22 @@
   </header>
 
   <main>
+
+
+
     <div class="container">
+      <!-- Lig tercihini eklemek için yeni bir select (dropdown) ekleyelim -->
+      <div class="league-select">
+        <label for="leagueSelect">Lig Seçiniz:</label>
+        <select id="leagueSelect">
+          <option value="superlig">Süper Lig</option>
+          <option value="pl">Premier League</option>
+          <option value="laliga">La Liga</option>
+          <option value="seriea">Serie A</option>
+          <!-- Diğer ligler... -->
+        </select>
+        <button onclick="getMatches()" class="show-matches-btn">Ligleri Göster</button>
+      </div>
       <div class="date-container">
         <section>
           <div id="dateContainer">
@@ -25,14 +40,16 @@
       </div>
       <div class="match-container">
         <section>
-          <h2>Maçlar</h2>
           <div id="match-container">
             <!-- Maç verileri buraya eklenecek -->
           </div>
+          <div id="noMatchesMessage" class="no-matches-message">
+            Bu tarihte maç bulunamadı.
+        </div>
         </section>
       </div>
     </div>
-    
+
 
 
 
